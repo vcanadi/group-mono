@@ -39,14 +39,14 @@ packages:
 - '.'
 - location:
     git:    git@github.com:vcanadi/prelude-custom.git
-    commit: e2a05ac8132333c27dca0222883f0163c15c426e
+    commit: 2eb3c1a024451c10c2fcd53c49424a49dec119bb
   extra-dep: true
 
 
 # Dependency packages to be pulled from upstream that are not in the resolver
 # (e.g., acme-missiles-0.3)
 extra-deps:
-- endo-0.3.0.1
+- endo-0.3.0.0
 
 # Override default flag values for local packages and extra-deps
 flags: {}
