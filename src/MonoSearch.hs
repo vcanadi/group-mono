@@ -14,7 +14,7 @@ toDec = bool <$> id <*> fmap negate <*> isInc
 
 
 d = 100
-search :: (Fractional a, Eq a, Ord a) => (a -> a) -> (a -> a)
+search :: RealFrac a => (a -> a) -> (a -> a)
 search f  | isInc f = MonoInc.search d range01 f
           | True    = toDec $ MonoInc.search d range01 (toInc f)
 

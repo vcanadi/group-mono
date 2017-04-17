@@ -18,6 +18,5 @@ instance Monoid (Mono a) where
     mempty  = mempty endo
     mappend = (Mono .) . mappend `on` endo
 
-instance (Fractional a, Ord a) => Group (Mono a) where
+instance RealFrac a => Group (Mono a) where
     invert  =  mono . monoInv . appMono
-
